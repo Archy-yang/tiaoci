@@ -1,6 +1,6 @@
 <?php
 
-namespace Acme\DemoBundle\Controller;
+namespace Acme\TiaociBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\SecurityContext;

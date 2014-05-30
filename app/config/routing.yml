@@ -1,0 +1,2 @@
+_acme_demo:
+    resource: "@AcmeTiaociBundle/Resources/config/routing.yml"
