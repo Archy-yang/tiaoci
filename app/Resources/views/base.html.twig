@@ -2,13 +2,371 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Blain Theme Demo | Just another InkHive Demo Sites site{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+
+        <link rel='stylesheet' id='blain-basic-style-css'  href="{{ asset('bundles/tiaoci/css/style.css') }}" type='text/css' media='all' />
+        <link rel='stylesheet' id='blain-layout-css'  href="{{ asset('bundles/tiaoci/css/layouts/content-sidebar.css') }}" type='text/css' media='all' />
+        <link rel='stylesheet' id='blain-bootstrap-style-css'  href="{{ asset('bundles/tiaoci/css/bootstrap.min.css') }}" type='text/css' media='all' />
+        <link rel='stylesheet' id='blain-main-style-css'  href="{{ asset('bundles/tiaoci/css/main.css')}}" type='text/css' media='all' />
+        <link rel='stylesheet' id='blain-nivo-slider-default-theme-css'  href="{{ asset('bundles/tiaoci/css/nivo/themes/default/default.css') }}" type='text/css' media='all' />
+        <link rel='stylesheet' id='blain-nivo-slider-style-css'  href="{{ asset('bundles/tiaoci/css/nivo/nivo.css') }}" type='text/css' media='all' />
+
+        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/jquery/jquery.js') }}"></script>
+        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/jquery/jquery-migrate.min.js') }}"></script>
+        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/jquery.timeago.js') }}"></script>
+        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/collapse.js') }}"></script>
+        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/nivo.slider.js') }}"></script>
+        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/superfish.js') }}"></script>
+        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/jquery/jquery.masonry.min.js') }}"></script>
+        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/bootstrap.min.js') }}"></script>
+        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/custom.js') }}"></script>
+
+
+        <style>
+        </style> 
+        <style type="text/css">
+            .recentcomments a {
+                display:inline !important;
+                padding:0 !important;
+                margin:0 !important;
+            }
+            .isStuck {
+                z-index: 15;
+                width: 100%;
+                margin: auto;
+            }
+            #masthead{
+                margin: 30px auto;
+
+            }
+        </style>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-        <link rel="stylesheet" href="{{ asset('bundles/tiaoci/css/bootstrap.min.css') }}" />
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body class="home blog group-blog">
+        <div id="page" class="hfeed site">
+            <header id="masthead" class="site-header row container" role="banner">
+                <div class="site-branding col-md-6">
+                    <h1 class="site-title">
+                        <a href="http://demo.inkhive.com/blain/" title="Blain Theme Demo" rel="home">
+                            {% block name %}
+                            Blain Theme Demo
+                            {% endblock %}
+                        </a>
+                    </h1> 
+                    <h2 class="site-description">
+                        {% block detail %}
+                        Just another InkHive Demo Sites site
+                        {% endblock %}
+                    </h2>
+                </div>
+                <div id="social-icons" class="col-md-6">
+                    <a target='_blank' href="http://facebook.com/rohitinked" title="Facebook" >
+                        <i class="social-icon icon-facebook-sign"></i>
+                    </a>
+                    <a target='_blank' href="http://twitter.com/rohitinked" title="Twitter" >
+                        <i class="social-icon icon-twitter-sign"></i>
+                    </a>
+                </div>
+            </header><!-- #masthead -->
+
+            <div class="navbar-wrapper">
+                <div class="nav-wrapper container ">
+                    <nav id="site-navigation" class="navbar navbar-default main-navigation" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                      
+                        
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                            <ul id="menu-menu-1" class="nav navbar-nav">
+                                <li id="menu-item-3" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-3 active">
+                                    <a title="Home" href="http://demo.inkhive.com/blain/">
+                                        <span class="glyphicon icon-home"></span>
+                                        &nbsp;Home
+                                    </a>
+                                </li>
+                                <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4">
+                                    <a title="Sample Page" href="http://demo.inkhive.com/blain/sample-page/">Sample Page</a>
+                                </li>
+                                <li id="menu-item-1714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1714 dropdown">
+                                    <a title="About The Tests" href="http://demo.inkhive.com/blain/about/" data-toggle="dropdown" class="dropdown-toggle">About The Tests <span class="caret"></span></a>
+                                    <ul role="menu" class=" dropdown-menu">
+                                        <li id="menu-item-1715" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1715">
+                                            <a title="Page Markup And Formatting" href="http://demo.inkhive.com/blain/about/page-markup-and-formatting/">Page Markup And Formatting</a>
+                                        </li>
+                                        <li id="menu-item-1716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1716">
+                                            <a title="Page Image Alignment" href="http://demo.inkhive.com/blain/about/page-image-alignment/">Page Image Alignment</a>
+                                        </li>
+                                        <li id="menu-item-1717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1717"><a title="Clearing Floats" href="http://demo.inkhive.com/blain/about/clearing-floats/">Clearing Floats</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-1718" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1718">
+                                    <a title="Music" href="http://demo.inkhive.com/blain/page-b/"><span class="glyphicon icon-music"></span>&nbsp;Music</a>
+                                </li>
+                                <li id="menu-item-1719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1719">
+                                    <a title="Customizable Icons" href="http://demo.inkhive.com/blain/page-a/"><span class="glyphicon icon-edit"></span>&nbsp;Customizable Icons</a>
+                                </li>
+                                <li id="menu-item-1720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1720">
+                                    <a title="Blog" href="http://demo.inkhive.com/blain/blog/">Blog</a>
+                                </li>
+                            </ul>
+                        </div>      
+                    </nav><!-- #site-navigation -->
+                </div>
+            </div>
+            <div id="content" class="site-content row container">
+                <div class="slider-wrapper theme-default"> 
+                    <div class="ribbon"></div> 
+
+                    <div id="slider" class="nivoSlider">
+                        <a href='#'>
+                            <img src='http://demo.inkhive.com/blain/wp-content/uploads/sites/2/2013/01/flickr.comphotosgioacchinopetronicce.jpg' title='#caption_1'>
+                        </a>
+                        <a href=''>
+                            <img src='http://demo.inkhive.com/blain/wp-content/uploads/sites/2/2013/10/flickr.comphotosgioacchinopetronicce10120201235.jpg' title='#caption_2'>
+                        </a>
+                        <a href=''>
+                            <img src='http://demo.inkhive.com/blain/wp-content/uploads/sites/2/2013/10/flickr.comphotosgioacchinopetronicce10098692426.jpg' title=''>
+                        </a>  
+                    </div><!--#slider-->
+
+                    <div id='caption_1' class='nivo-html-caption'>
+                        <a href='#'>
+                            <div class='slide-title'>Skating through the Roads</div>
+                        </a>
+                        <div class='slide-description'>This theme uses the Nivo Slider and supports heading and taglines.</div>
+                    </div>
+
+                    <div id='caption_2' class='nivo-html-caption'>
+                        <a href=''>
+                            <div class='slide-title'>I am using Dark Slider Images</div>
+                        </a>
+                        <div class='slide-description'>Images are grayscaled. But you can use colored ones too.</div>
+                    </div>    
+                </div>
+            
+                <div id="primary" class="content-area col-md-9">
+                    <main id="main" class="site-main" role="main">
+                        <article id="post-1241" class="post-1241 post type-post status-publish format-standard sticky hentry category-uncategorized tag-sticky-2 tag-template row archive">
+                            
+                            <div class="featured-thumb col-md-3 col-xs-12">
+                            <a href="http://demo.inkhive.com/blain/2012/01/07/template-sticky/">
+                            <img width="220" height="200" src="http://demo.inkhive.com/blain/wp-content/uploads/sites/2/2012/01/lickr.comphotos73155612@N0410098639365-220x200.jpg" class="attachment-homepage-thumb wp-post-image" alt="image" />  </a>
+                            </div>
+                            <div class="col-md-9 col-xs-12">
+                            <header class="entry-header">
+                                <h1 class="entry-title"><a href="http://demo.inkhive.com/blain/2012/01/07/template-sticky/" rel="bookmark">Template: Sticky</a></h1>
+
+                                        <div class="entry-meta">
+                                    <span class="posted-on"><i class="icon-time"> </i> <a href="http://demo.inkhive.com/blain/2012/01/07/template-sticky/" rel="bookmark"><time class="entry-date published" datetime="2012-01-07T07:07:21+00:00">January 7, 2012</time><time class="updated" datetime="2013-10-13T14:37:10+00:00">October 13, 2013</time></a></span> <span class="byline"> <i class="icon-user"> </i> <span class="author vcard"><a class="url fn n" href="http://demo.inkhive.com/blain/author/themedemos/">themedemos</a></span></span>      </div><!-- .entry-meta -->
+                                    </header><!-- .entry-header -->
+
+                                <div class="entry-content">
+                            <p>This is a sticky post. There are a few things to verify: The sticky post should be distinctly recognizable in some way in comparison to normal posts. You can style the .sticky class if you are using the post_class() function to generate your post classes, which is a best practice. They should show at the very top [&hellip;]</p>
+                            </div><!-- .entry-content -->
+                                </div>
+                        </article><!-- #post-## -->
+                                    
+                                        
+                        <article id="post-1" class="post-1 post type-post status-publish format-standard hentry category-uncategorized row archive">
+                            
+                            <div class="featured-thumb col-md-3 col-xs-12">
+                            <a href="http://demo.inkhive.com/blain/2013/10/13/hello-world/">
+                            <img width="220" height="200" src="http://demo.inkhive.com/blain/wp-content/uploads/sites/2/2013/10/flickr.comphotosgioacchinopetronicce10120201235-220x200.jpg" class="attachment-homepage-thumb wp-post-image" alt="flickr.com:photos:gioacchinopetronicce:10120201235" />    </a>
+                            </div>
+                            <div class="col-md-9 col-xs-12">
+                            <header class="entry-header">
+                                <h1 class="entry-title"><a href="http://demo.inkhive.com/blain/2013/10/13/hello-world/" rel="bookmark">Hello world!</a></h1>
+
+                                        <div class="entry-meta">
+                                    <span class="posted-on"><i class="icon-time"> </i> <a href="http://demo.inkhive.com/blain/2013/10/13/hello-world/" rel="bookmark"><time class="entry-date published" datetime="2013-10-13T11:55:38+00:00">October 13, 2013</time><time class="updated" datetime="2013-10-13T15:14:57+00:00">October 13, 2013</time></a></span> <span class="byline"> <i class="icon-user"> </i> <span class="author vcard"><a class="url fn n" href="http://demo.inkhive.com/blain/author/rohitinklive-com/">InkHive</a></span></span>      </div><!-- .entry-meta -->
+                                    </header><!-- .entry-header -->
+
+                                <div class="entry-content">
+                            <p>Welcome to InkHive Demo Sites. This is your first post. Edit or delete it, then start blogging!</p>
+                            </div><!-- .entry-content -->
+                                </div>
+                        </article><!-- #post-## -->                     
+                                    
+                        <article id="post-993" class="post-993 post type-post status-publish format-standard hentry category-template-2 category-uncategorized tag-content-2 tag-excerpt-2 tag-template row archive">
+                            <div class="featured-thumb col-md-3 col-xs-12">
+                            <a href="http://demo.inkhive.com/blain/2012/03/15/template-excerpt-defined/">
+                                    <img src="http://demo.inkhive.com/blain/wp-content/themes/blain/images/dthumb.png">  
+                                    </a>
+                            </div>
+                            <div class="col-md-9 col-xs-12">
+                            <header class="entry-header">
+                                <h1 class="entry-title"><a href="http://demo.inkhive.com/blain/2012/03/15/template-excerpt-defined/" rel="bookmark">Template: Excerpt (Defined)</a></h1>
+
+                                        <div class="entry-meta">
+                                    <span class="posted-on"><i class="icon-time"> </i> <a href="http://demo.inkhive.com/blain/2012/03/15/template-excerpt-defined/" rel="bookmark"><time class="entry-date published" datetime="2012-03-15T14:38:08+00:00">March 15, 2012</time></a></span> <span class="byline"> <i class="icon-user"> </i> <span class="author vcard"><a class="url fn n" href="http://demo.inkhive.com/blain/author/themedemos/">themedemos</a></span></span>        </div><!-- .entry-meta -->
+                                    </header><!-- .entry-header -->
+
+                                <div class="entry-content">
+                            <p>This is a user-defined post excerpt. It should be displayed in place of the post content in archive-index pages.</p>
+                            </div><!-- .entry-content -->
+                                </div>
+                        </article><!-- #post-## -->
+                                    
+                        <div class="pagination">
+                            <div>
+                                <ul>
+                                    <li>
+                                        <span>1 of 4</span>
+                                    </li>
+                                    <li>
+                                        <span class='page-numbers current'>1</span>
+                                    </li>
+                                    <li>
+                                        <a class='page-numbers' href='http://demo.inkhive.com/blain/page/2/'>2</a>
+                                    </li>
+                                    <li>
+                                        <a class='page-numbers' href='http://demo.inkhive.com/blain/page/3/'>3</a>
+                                    </li>
+                                    <li>
+                                        <a class='page-numbers' href='http://demo.inkhive.com/blain/page/4/'>4</a>
+                                    </li>
+                                    <li>
+                                        <a class="next page-numbers" href="http://demo.inkhive.com/blain/page/2/">Next &raquo;</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+
+                <div id="secondary" class="widget-area col-md-3" role="complementary">
+                    <aside id="blain_rp-2" class="widget widget_blain_rp">
+                        <h1 class="widget-title">Latest Articles</h1>       
+                        <ul class="rp">
+                            <li class='rp-item'>
+                                <div class='rp-thumb'>
+                                    <a href="http://demo.inkhive.com/blain/2013/10/13/hello-world/">
+                                            <img width="150" height="150" src="http://demo.inkhive.com/blain/wp-content/uploads/sites/2/2013/10/flickr.comphotosgioacchinopetronicce10120201235-150x150.jpg" class="attachment-thumbnail wp-post-image" alt="flickr.com:photos:gioacchinopetronicce:10120201235" />
+                                    </a>
+                                </div>
+                                    
+                                <div class='rp-title'>
+                                    <a href="http://demo.inkhive.com/blain/2013/10/13/hello-world/">Hello world!</a>
+                                </div>
+                            </li>      
+                              
+                                         
+                            <li class='rp-item'>
+                                <div class='rp-thumb'>
+                                    <a href="http://demo.inkhive.com/blain/2013/01/11/markup-html-tags-and-formatting/">
+                                        <img width="150" height="150" src="http://demo.inkhive.com/blain/wp-content/uploads/sites/2/2013/10/flickr.comphotosgioacchinopetronicce10098692426-150x150.jpg" class="attachment-thumbnail wp-post-image" alt="flickr.com:photos:gioacchinopetronicce:10098692426" />
+                                    </a>
+                                </div>
+                                    
+                                <div class='rp-title'>
+                                    <a href="http://demo.inkhive.com/blain/2013/01/11/markup-html-tags-and-formatting/">Markup: HTML Tags and Formatting</a>
+                                </div>
+                            </li>                   
+                        </ul>
+                    </aside>        
+                    <aside id="recent-posts-2" class="widget widget_recent_entries">        
+                        <h1 class="widget-title">Recent Posts</h1>      
+                        <ul>
+                            <li>
+                                <a href="http://demo.inkhive.com/blain/2013/10/13/hello-world/">Hello world!</a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <aside id="recent-comments-2" class="widget widget_recent_comments">
+                        <h1 class="widget-title">Recent Comments</h1>
+                        <ul id="recentcomments">
+                            <li class="recentcomments">
+                                <a href='http://demo.inkhive.com/' rel='external nofollow' class='url'>Mr WordPress</a>
+                                on 
+                                <a href="http://demo.inkhive.com/blain/2013/10/13/hello-world/#comment-1">Hello world!</a>
+                            </li>
+                            <li class="recentcomments">
+                                <a href='http://example.org/' rel='external nofollow' class='url'>John Doe</a> on 
+                                <a href="http://demo.inkhive.com/blain/2009/08/06/edge-case-no-content/#comment-30">Edge Case: No Content</a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <aside id="archives-2" class="widget widget_archive">
+                        <h1 class="widget-title">Archives</h1>      
+                        <ul>
+                            <li>
+                                <a href='http://demo.inkhive.com/blain/2013/10/'>October 2013</a>
+                            </li>
+                            <li>
+                                <a href='http://demo.inkhive.com/blain/2013/01/'>January 2013</a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <aside id="categories-2" class="widget widget_categories">
+                        <h1 class="widget-title">Categories</h1>        
+                        <ul>
+                            <li class="cat-item cat-item-3">
+                                <a href="http://demo.inkhive.com/blain/category/aciform/" title="View all posts filed under aciform">aciform</a>
+                            </li>
+                            <li class="cat-item cat-item-4">
+                                <a href="http://demo.inkhive.com/blain/category/antiquarianism/" title="View all posts filed under antiquarianism">antiquarianism</a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <aside id="meta-2" class="widget widget_meta">
+                        <h1 class="widget-title">Meta</h1>          
+                        <ul>
+                            <li>
+                                <a href="http://demo.inkhive.com/blain/wp-login.php">Log in</a>
+                            </li>
+                            <li>
+                                <a href="http://demo.inkhive.com/blain/feed/" title="Syndicate this site using RSS 2.0">Entries 
+                                    <abbr title="Really Simple Syndication">RSS</abbr>
+                                </a>
+                            </li>                       
+                        </ul>
+                    </aside>
+                    <aside id="search-2" class="widget widget_search">
+                        <form role="search" method="get" class="row search-form" action="http://demo.inkhive.com/blain/">
+                            <label>
+                                <span class="screen-reader-text">Search for:</span>
+                                <input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s">
+                            </label>
+                            <input type="submit" class="search-submit" value="Search">
+                        </form>
+                    </aside>    
+                </div><!-- #secondary -->
+                <div>
+                    <footer id="colophon" class="site-footer container row" role="contentinfo">
+                        <div class="site-info col-md-5">
+                            Blain Theme by 
+                            <a href="http://inkhive.com/" rel="designer">InkHive</a>.       
+                        </div><!-- .site-info -->
+                            
+                        <div id="footertext" class="col-md-7">
+                                &copy; Rohit Tripathi 2013        
+                            </div>   
+                    </footer><!-- #colophon -->
+                </div><!-- #page -->
+            </div>
+        </div>
+        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/navigation.js') }}">
+        </script>
+        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/skip-link-focus-fix.js') }}">
+        </script>
+        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/stickUp.min.js') }}"></script>
+        <script type='text/javascript'>
+            jQuery(function($) {
+                $(document).ready( function() {
+                  //enabling stickUp on the '.navbar-wrapper' class
+                    $('.navbar-wrapper').stickUp(10);
+                });
+            });
+        </script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
