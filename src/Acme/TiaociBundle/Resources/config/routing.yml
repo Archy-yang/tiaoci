@@ -1,5 +1,5 @@
 _welcome:
-    pattern:  /
+    pattern:  /welcome
     defaults: { _controller: AcmeTiaociBundle:Welcome:index }
 
 _demo_secured:
@@ -10,3 +10,8 @@ _demo:
     resource: "@AcmeTiaociBundle/Controller/DemoController.php"
     type:     annotation
     prefix:   /demo
+
+_index:
+    pattern:  /
+    defaults: { _controller: AcmeTiaociBundle:Index:index }
+    
