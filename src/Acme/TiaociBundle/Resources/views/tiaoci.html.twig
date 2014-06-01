@@ -1,1 +1,27 @@
 {% extends "::base.html.twig" %}
+
+{% block title %}
+	{{ parent() }}
+{% endblock %}
+
+{% block name %}
+	挑刺儿
+{% endblock %}
+
+{% block detail %}
+	只为极致体验
+{% endblock %}
+
+{% block icron %}
+	    <link rel="icon" sizes="16x16" href="{{ asset('bundles/tiaoci/css/nivo/themes/bar/bullets.png') }}" />
+{% endblock %}
+
+
+{% block menu %}
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-3 active">
+    <a title="Home" href="http://demo.inkhive.com/blain/">
+        <span class="glyphicon icon-home"></span>
+        &nbsp;Home
+    </a>
+</li>
+{% endblock %}
