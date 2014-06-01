@@ -1,6 +1,10 @@
 {% extends "AcmeTiaociBundle::layout.html.twig" %}
 
 {% block title "Hello " ~ name %}
+{% block head %}
+    <link rel="icon" sizes="16x16" href="{{ asset('bundles/tiaoci/css/nivo/themes/bar/bullets.png') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/demo.css') }}" />
+{% endblock %}
 
 {% block content %}
     <h1>Hello {{ name }}!</h1>

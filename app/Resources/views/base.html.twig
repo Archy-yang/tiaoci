@@ -3,15 +3,15 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}Blain Theme Demo | Just another InkHive Demo Sites site{% endblock %}</title>
+        <title>{% block title %}挑刺儿 | 只为极致体验{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
 
-        <link rel='stylesheet' id='blain-basic-style-css'  href="{{ asset('bundles/tiaoci/css/style.css') }}" type='text/css' media='all' />
-        <link rel='stylesheet' id='blain-layout-css'  href="{{ asset('bundles/tiaoci/css/layouts/content-sidebar.css') }}" type='text/css' media='all' />
-        <link rel='stylesheet' id='blain-bootstrap-style-css'  href="{{ asset('bundles/tiaoci/css/bootstrap.min.css') }}" type='text/css' media='all' />
-        <link rel='stylesheet' id='blain-main-style-css'  href="{{ asset('bundles/tiaoci/css/main.css')}}" type='text/css' media='all' />
-        <link rel='stylesheet' id='blain-nivo-slider-default-theme-css'  href="{{ asset('bundles/tiaoci/css/nivo/themes/default/default.css') }}" type='text/css' media='all' />
-        <link rel='stylesheet' id='blain-nivo-slider-style-css'  href="{{ asset('bundles/tiaoci/css/nivo/nivo.css') }}" type='text/css' media='all' />
+        <link rel='stylesheet' href="{{ asset('bundles/tiaoci/css/style.css') }}" type='text/css' media='all' />
+        <link rel='stylesheet' href="{{ asset('bundles/tiaoci/css/layouts/content-sidebar.css') }}" type='text/css' media='all' />
+        <link rel='stylesheet' href="{{ asset('bundles/tiaoci/css/bootstrap.min.css') }}" type='text/css' media='all' />
+        <link rel='stylesheet' href="{{ asset('bundles/tiaoci/css/main.css')}}" type='text/css' media='all' />
+        <link rel='stylesheet' href="{{ asset('bundles/tiaoci/css/nivo/themes/default/default.css') }}" type='text/css' media='all' />
+        <link rel='stylesheet' href="{{ asset('bundles/tiaoci/css/nivo/nivo.css') }}" type='text/css' media='all' />
 
         <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/jquery/jquery.js') }}"></script>
         <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/jquery/jquery-migrate.min.js') }}"></script>
@@ -22,7 +22,9 @@
         <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/jquery/jquery.masonry.min.js') }}"></script>
         <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/bootstrap.min.js') }}"></script>
         <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/custom.js') }}"></script>
+        {% block icron %}
 
+        {% endblock %}
 
         <style>
         </style> 
@@ -42,7 +44,6 @@
 
             }
         </style>
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body class="home blog group-blog">
         <div id="page" class="hfeed site">
@@ -85,7 +86,9 @@
                       
                         
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
+                            
                             <ul id="menu-menu-1" class="nav navbar-nav">
+                                {% block menu %}
                                 <li id="menu-item-3" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-3 active">
                                     <a title="Home" href="http://demo.inkhive.com/blain/">
                                         <span class="glyphicon icon-home"></span>
@@ -117,7 +120,9 @@
                                 <li id="menu-item-1720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1720">
                                     <a title="Blog" href="http://demo.inkhive.com/blain/blog/">Blog</a>
                                 </li>
+                                {% endblock %}
                             </ul>
+                            
                         </div>      
                     </nav><!-- #site-navigation -->
                 </div>
