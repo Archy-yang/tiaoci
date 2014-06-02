@@ -22,6 +22,11 @@
         <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/jquery/jquery.masonry.min.js') }}"></script>
         <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/bootstrap.min.js') }}"></script>
         <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/custom.js') }}"></script>
+        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/navigation.js') }}">
+        </script>
+        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/skip-link-focus-fix.js') }}">
+        </script>
+        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/stickUp.min.js') }}"></script>
         {% block icron %}
 
         {% endblock %}
@@ -45,6 +50,7 @@
             }
         </style>
     </head>
+    {% block body %}
     <body class="home blog group-blog">
         <div id="page" class="hfeed site">
             <header id="masthead" class="site-header row container" role="banner">
@@ -359,11 +365,6 @@
                 </div><!-- #page -->
             </div>
         </div>
-        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/navigation.js') }}">
-        </script>
-        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/skip-link-focus-fix.js') }}">
-        </script>
-        <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/stickUp.min.js') }}"></script>
         <script type='text/javascript'>
             jQuery(function($) {
                 $(document).ready( function() {
@@ -374,4 +375,5 @@
         </script>
         {% block javascripts %}{% endblock %}
     </body>
+    {% endblock %}
 </html>

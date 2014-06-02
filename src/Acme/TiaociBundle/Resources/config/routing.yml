@@ -10,3 +10,7 @@ _demo:
 _index:
     pattern:  /
     defaults: { _controller: AcmeTiaociBundle:Index:index }
+
+_admin_index:
+    pattern: /admin/index
+    defaults: { _controller: AcmeTiaociBundle:Admin:index }

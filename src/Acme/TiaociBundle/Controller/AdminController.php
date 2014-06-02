@@ -9,20 +9,14 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-/**
- * @author yangqi
- */
-class IndexController
+class AdminController extends Controller
 {
     /**
      * @Template()
      */
-    public function indexAction() 
+    public function indexAction()
     {
-        $article = new Article();
-
-
-        
         return array();
     }
 }
+
