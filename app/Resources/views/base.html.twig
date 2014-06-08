@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}挑刺儿 | 只为极致体验{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
 
         <link rel='stylesheet' href="{{ asset('bundles/tiaoci/css/style.css') }}" type='text/css' media='all' />
         <link rel='stylesheet' href="{{ asset('bundles/tiaoci/css/layouts/content-sidebar.css') }}" type='text/css' media='all' />
@@ -27,6 +27,8 @@
         <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/skip-link-focus-fix.js') }}">
         </script>
         <script type='text/javascript' src="{{ asset('bundles/tiaoci/js/stickUp.min.js') }}"></script>
+
+        {% endblock %}
         {% block icron %}
 
         {% endblock %}
@@ -50,8 +52,8 @@
             }
         </style>
     </head>
-    {% block body %}
     <body class="home blog group-blog">
+    {% block body %}
         <div id="page" class="hfeed site">
             <header id="masthead" class="site-header row container" role="banner">
                 <div class="site-branding col-md-6">
@@ -374,6 +376,7 @@
             });
         </script>
         {% block javascripts %}{% endblock %}
+            {% endblock %}
     </body>
-    {% endblock %}
+
 </html>
